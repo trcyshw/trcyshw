@@ -1,0 +1,2 @@
+<?php
+	/* Template name: Placeholder */

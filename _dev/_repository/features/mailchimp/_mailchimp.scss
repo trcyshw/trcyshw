@@ -1,0 +1,90 @@
+/*=================================================================================
+	MAILCHIMP
+=================================================================================*/
+#mc_embed_signup {
+	margin:rem-calc(10) auto $gutter;
+	padding:0;
+	@media (min-width:$tablet-portrait) {
+		margin:rem-calc(10) 0 $gutter;
+	}
+	form {
+		position:relative;
+		.indicates-required {
+			font-size:0;color:transparent;
+			span {
+				font-size:0;color:transparent;
+			}
+			&:before {
+				content:"Fields marked with a * are required";
+				margin:0 0 rem-calc(5) 0;
+				font-size:$font-size-small;
+				color:#666666;
+				font-style:italic;
+			}
+		}
+		.mc-field-group {
+			label {
+				display:none;
+			}
+			input {
+				background:lighten($secondary,35);
+				border:none;
+				padding:rem-calc(5);
+				font-size:rem-calc(13);
+				padding-right:rem-calc(50);
+				line-height:1;
+				color:$body;
+				max-width:rem-calc(350);
+				font-weight:$fw-bold;
+				@include placeholder($body);
+				&:hover, &:focus {
+					background:lighten($secondary,40);
+				}
+			}
+			div {
+				&.mce_inline_error {
+					font-size:$font-size-small!important;
+					font-weight:$fw-normal;
+					background:lighten(#cc0000,20%)!important;
+					border:rem-calc(1) solid #cc0000!important;
+					margin:0;
+					max-width:rem-calc(350);
+				}
+			}
+		}
+		#mce-responses > div {
+			padding:$gutter/2;
+			margin-top:0;
+			font-size:$font-size-small;
+			color:#ffffff;
+			max-width:rem-calc(350);
+			a {
+				color:inherit;
+			}
+			&#mce-error-response {
+				background:lighten(#cc0000,20%);
+				border:rem-calc(1) solid #cc0000;
+			}
+			&#mce-success-response {
+				background:#87ae5d;
+				border:rem-calc(1) solid darken(#87ae5d,20%);
+			}
+		}
+		#mc-embedded-subscribe {
+			background:$primary;
+			border:none;
+			color:#ffffff;
+			border-radius:rem-calc(3);
+			padding:rem-calc(5) rem-calc(15);
+			margin:rem-calc(5) 0 0;
+			font-family:$font-heading;
+			top:0;
+			right:0;
+			line-height:1;
+			font-size:rem-calc(16);
+			&:hover {
+				background:darken($primary,5%);
+			}
+		}
+	}
+}

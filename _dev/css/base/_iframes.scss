@@ -1,0 +1,33 @@
+/**
+* #.# Iframes
+*/
+main iframe,
+aside iframe {
+	margin: 0 0 $gutter;
+	display: block;
+	width: 100% !important;
+}
+
+.iframe-container {
+	width: 100%;
+}
+
+/**
+* #.# Videos
+*/
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: rem-calc(25);
+	height: 0;
+	margin-bottom: $gutter;
+
+	iframe { /* .video-container iframe */
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+

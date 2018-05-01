@@ -1,0 +1,76 @@
+/*!
+Theme Name: trcyshw
+Author: Tracey Shaw
+Author URI: http://www.trcyshw.com/
+Description: Custom WordPress theme for me!
+Text Domain: trcyshw
+Version: 1.0
+*/
+
+/**
+ * SASS Core
+ */
+@import "functions";
+@import "mixins";
+@import "variables";
+
+/**
+ * Imports
+ */
+@import "base/base";
+@import "base/body";
+@import "base/grid";
+@import "base/links";
+@import "layout/sections";
+@import "base/error404";
+// @import "base/child-pages";
+//
+// @import "base/address";
+// @import "base/typography";
+// @import "base/links";
+// @import "base/nav";
+// @import "base/nav-responsive";
+// @import "base/buttons";
+// @import "base/messages";
+// @import "base/forms";
+// @import "base/iframes";
+// @import "base/images";
+// @import "base/pagination";
+// @import "base/styleguide";
+// @import "base/tables";
+// @import "base/lightbox";
+// @import "base/gallery";
+
+//----------------------------------------------
+//  Layout
+//----------------------------------------------
+// @import "layout/header";
+// @import "layout/sections";
+// @import "layout/sidebar";
+// @import "layout/excerpts";
+// @import "layout/footer";
+
+//----------------------------------------------
+//  Features
+//----------------------------------------------
+//@import "features/accordions";
+//@import "features/events";
+//@import "features/carousel";
+//@import "features/mailchimp";
+//@import "features/mobile-cta";
+//@import "features/reviews";
+//@import "features/search";
+//@import "features/slider";
+//@import "features/staff";
+//@import "features/woocommerce";
+
+
+//----------------------------------------------
+//  Misc
+//----------------------------------------------
+//@import "global";
+
+//----------------------------------------------
+//  Overrides
+//----------------------------------------------
+//@import "overrides/ie";

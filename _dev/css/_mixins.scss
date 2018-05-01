@@ -1,0 +1,116 @@
+/**
+* #.# Breakpoint Mixin
+*
+*/
+
+$pony:			320px;
+$pot:				500px;
+$schooner:	600px;
+$pint:			768px;
+$jug:				1200px;
+
+@mixin from($device-width) {
+
+	@media screen and (min-width: $device-width) {
+
+		@content;
+	}
+}
+
+@mixin to($device-width) {
+
+	@media screen and (max-width: $device-width - 1) {
+
+		@content;
+	}
+}
+
+/**
+ * #.# Fluid Property Mixin
+ * Sets a calculation based on the given pixel input, can be used for any CSS
+ * element that takes a numberic input (padding,margin,width etc.).
+ * This mixin then calculates the value needed between 320px and 1920px, unless
+ * given an start and and end point.
+ *
+ * Usage: @include fp(font-size,16,42);
+ */
+
+@mixin fp($property, $min, $max, $start: 320, $end: 1920, $clip: true, $clipAtStart: true, $clipAtEnd: true) {
+	$adder: ($min * $end - $max * $start) / ($end - $start);
+	$multiplier: ($max - $min) / ($end - $start) * 100;
+	$formula: calc(#{$multiplier + 0vw} + #{$adder + 0px});
+
+	@if $clip and $clipAtStart {
+
+		@media (max-width: #{$start + 0px}) {
+			#{$property}: $min + 0;
+		}
+	}
+
+	@if $clip and $clipAtEnd {
+
+		@media (min-width: #{$end + 0px}) {
+			#{$property}: $max + 0;
+		}
+	}
+	#{$property}: $formula;
+}
+
+/**
+ * #.# Alignments
+ */
+
+@mixin align-vertical {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin align-horizontal {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+@mixin align-center {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/**
+ * #.# Input Placeholders
+ */
+
+@mixin placeholder($color) {
+
+	&::-webkit-input-placeholder {
+		color: $color;
+		padding-top: rem-calc(2);
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		padding-top: rem-calc(2);
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+		color: $color;
+		padding-top: rem-calc(2);
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+		padding-top: rem-calc(2);
+	}
+}
+
+/**
+* #.# Icons
+*/
+
+@mixin icon($icon) {
+	content: $icon;
+	font-family: FontAwesome;
+}

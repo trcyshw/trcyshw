@@ -1,0 +1,93 @@
+/*==============================================================================
+	EXCERPTS
+	Used by parts/excerpt, which is used by parts/children, post archives
+	(e.g. index.php), and search results.
+	Formerly known as "Posts & Children".
+==============================================================================*/
+.article {
+
+	border-top: rem-calc(1) solid $border-color;
+	margin: 0;
+	padding: rem-calc(20) 0;
+
+	@include fp(padding-top,20,40);
+	@include fp(padding-bottom,20,40);
+
+	@include bp($small) {
+		flex-wrap: nowrap;
+	}
+
+	&:first-of-type {
+
+		border-top: none;
+		padding-top: 0;
+	}
+
+	.image {
+		padding: 0 0 rem-calc(10);
+		width: 100%;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			height: auto;
+		}
+
+		a,
+		a:hover,
+		a:focus {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.excerpt {
+
+		h3 {
+			background: none;
+			padding: 0;
+			margin: 0 0 rem-calc(15);
+
+			a {
+				&.title {
+					border: none;
+					box-shadow: none;
+					color: $body;
+					margin: 0;
+					padding: 0;
+					text-decoration: none;
+					&:hover,
+					&:focus {
+						color: $body;
+					}
+				}
+			}
+		}
+
+		small {
+			margin: 0 0 rem-calc(10);
+			padding: 0;
+			opacity: 0.8;
+		}
+
+		a.btn {
+			@include fp(font-size,$body-min - 2,$body-max - 2);
+		}
+	}
+	&.has-post-thumbnail {
+
+		@include bp($small) {
+
+			.image {
+				width: 25%;
+			}
+
+			.excerpt {
+				padding: 0 0 0 rem-calc(30);
+				width: 75%;
+			}
+		}
+	}
+}

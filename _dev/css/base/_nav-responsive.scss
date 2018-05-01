@@ -1,0 +1,143 @@
+/**
+* #.# Responsive Nav
+*/
+#responsive {
+	display: block;
+	position: relative;
+	z-index: 1000;
+
+	@include bp($tablet-portrait) {
+		display: none;
+	}
+
+	span {
+		color: $color-2;
+		cursor: pointer;
+		padding: rem-calc(10);
+		position: absolute;
+		text-align: left;
+		width: rem-calc(100);
+
+		i {
+			font-size: rem-calc(22);
+			line-height: 1;
+			position: relative;
+
+			&:after {
+
+				@include align-vertical;
+				content: "Menu";
+				display: block;
+				font-family: $font-nav;
+				font-size: rem-calc(12);
+				line-height: 1;
+				margin: 0 0 0 100%;
+				padding: 0 0 0 rem-calc(5);
+				text-transform: $font-nav-transform;
+			}
+		}
+	}
+
+	ul {
+		background: $color-3;
+		display: none;
+		font-size: rem-calc(16);
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border: solid darken($color-3, 10);
+			border-width: 0 0 rem-calc(1);
+			color: $white;
+			font-family: $font-nav;
+			font-weight: $fw-nav;
+			line-height: 1.15;
+			margin: 0;
+			padding: 0;
+			text-transform: $font-nav-transform;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				display: block;
+				padding: rem-calc(10);
+			}
+
+			&:last-child {
+				border: none;
+			}
+
+			&:hover {
+				background: darken($color-3, 5%);
+				color: $white;
+
+				> ul {
+					border: solid darken($color-3, 10);
+					border-width: rem-calc(1) 0 0 0;
+					display: block;
+					height: auto;
+					left: auto;
+					margin: 0;
+					opacity: 1;
+					overflow: visible;
+					position: relative;
+					text-align: left;
+					top: auto;
+					transition: $transition;
+					white-space: normal;
+					width: auto;
+				}
+			}
+
+			ul {
+				display: none;
+				font-size: 90%;
+				left: 0;
+				opacity: 0;
+				top: -9999px;
+				z-index: 1;
+
+				li {
+					font-weight: $fw-normal;
+
+					a {
+						color: $white;
+
+						&:before {
+							content: "- ";
+						}
+					}
+
+					ul {
+
+						li {
+
+							a {
+
+								&:before {
+									content: "-- ";
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-item-has-children {
+				position: relative;
+
+				&:before {
+
+					@include icon("\f107");
+
+					color: inherit;
+					font-weight: $fw-normal;
+					position: absolute;
+					right: rem-calc(10);
+					top: rem-calc(8);
+				}
+			}
+		}
+	}
+}

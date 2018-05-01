@@ -1,0 +1,323 @@
+/**
+* #.# Forms
+*/
+
+main,
+article,
+aside {
+	form {
+
+		li {
+			list-style: none;
+		}
+
+		label {
+			display: block;
+			margin-top: 1em;
+		}
+
+		input:not[type="checkbox"],
+		input:not[type="radio"] {
+			-webkit-appearance: none;
+			border-radius: 0;
+		}
+
+		input[type="radio"] + label {
+			margin-top: 0;
+		}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label,
+		label.checkbox {
+			display: inline-block;
+		}
+
+		input[type="email"],
+		input[type="number"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		textarea,
+		select {
+			-webkit-appearance: none;
+			border: rem-calc(1) solid $border-color;
+			border-radius: 0;
+			color: lighten($body, 20%);
+			display: block;
+
+			@include fp(font-size,$body-min - 2,$body-max - 2);
+			margin-left: 0 !important;
+			padding: rem-calc(5);
+			width: 100% !important;
+
+			&:hover,
+			&:focus {
+				color: $body;
+			}
+		}
+
+		input[type="submit"],
+		input[type="button"] {
+			border-radius: 0;
+		}
+	}
+}
+
+/**
+* #.# Buttons
+*/
+input[type="submit"],
+input[type="button"],
+button {
+
+	@extend .btn;
+}
+
+/**
+* #.# Ninja Forms 3.0+
+*/
+.nf-form-cont {
+
+	.nf-form-fields-required {
+		color: lighten($body, 20%);
+		font-size: 90%;
+		font-style: italic;
+		margin: 0 0 rem-calc(10) 0;
+
+		span {
+			color: inherit;
+		}
+	}
+
+	.nf-form-title {
+		display: none;
+	}
+
+	.nf-response-msg {
+		color: rgb(79, 138, 16);
+		font-size: inherit;
+	}
+
+	nf-field { /* not a typo, this is an actual element name */
+		display: block;
+
+		@include fp(font-size, 14, 17);
+		margin: rem-calc(5) 0;
+
+		.nf-field-container {
+			margin: 0 0 rem-calc(10);
+
+			.field-wrap {
+
+				label {
+
+					span {
+						color: inherit;
+					}
+				}
+
+				input {
+
+					&[type="email"],
+					&[type="number"],
+					&[type="password"],
+					&[type="tel"],
+					&[type="text"] {
+						-webkit-appearance: none;
+						border: rem-calc(1) solid $border-color;
+						border-radius: 0;
+
+						@include fp(font-size,$body-min - 3,$body-max - 3);
+						padding: rem-calc(8);
+
+						@include placeholder($body);
+					}
+				}
+
+				textarea,
+				select {
+					-webkit-appearance: none;
+					border: rem-calc(1) solid $border-color;
+					border-radius: 0;
+					display: block;
+
+					@include fp(font-size,$body-min - 3,$body-max - 3);
+					padding: rem-calc(8);
+
+					@include placeholder($body);
+				}
+
+				&.nf-error {
+
+					input {
+
+						&[type="email"],
+						&[type="number"],
+						&[type="password"],
+						&[type="tel"],
+						&[type="text"] {
+							background: rgb(255, 186, 186);
+							border-color: rgb(216, 0, 12);
+
+							@include placeholder(rgb(216, 0, 12));
+						}
+					}
+
+					textarea,
+					select {
+						background: rgb(255, 186, 186);
+						border-color: rgb(216, 0, 12);
+
+						@include placeholder(rgb(216,0,12));
+					}
+				}
+			}
+
+			&.hidden {
+				display: none !important;
+			}
+
+			.nf-after-field {
+
+				.nf-input-limit {
+					margin: 0;
+				}
+
+				.nf-error-msg,
+				.nf-error-required-error {
+					border-left: rem-calc(3) solid rgb(216, 0, 12);
+					color: rgb(216, 0, 12);
+					font-size: rem-calc(11);
+					margin: rem-calc(3) 0 0 0;
+					line-height: 1;
+					padding: 0 0 0 rem-calc(5);
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.submit-container {
+			display: block;
+			margin: 0;
+
+			.submit-wrap {
+
+				input[type="button"] {
+					-webkit-appearance: none;
+
+					@include btn-accent;
+
+					border-radius: 0;
+					padding: rem-calc(8) rem-calc(40);
+				}
+			}
+		}
+	}
+
+	.nf-form-errors {
+
+		.nf-error-msg {
+
+			@include message-error;
+		}
+	}
+}
+
+/**
+* #.# Ninja Forms Pre 3.0
+*/
+.ninja-forms-cont {
+	padding-bottom: $gutter;
+
+	.ninja-forms-response-msg {
+		margin: 0;
+		font-weight: 700;
+	}
+
+	.ninja-forms-response-msg.ninja-forms-error-msg {
+		color: #c00;
+
+		p {
+			display: inline;
+			padding-right: rem-calc(5);
+		}
+	}
+
+	.ninja-forms-response-msg.ninja-forms-success-msg {
+		color: $color-2;
+		margin: 0 0 rem-calc(20);
+	}
+
+	.ninja-forms-field-error {
+		color: #c00;
+		font-size: 90%;
+
+		p {
+			display: inline;
+		}
+	}
+
+	.ninja-forms-error {
+
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		select {
+			border-color: #c00 !important;
+		}
+	}
+
+	.ninja-forms-field-description {
+		font-size: 90%;
+
+		p {
+			margin: 0 0 rem-calc(5);
+			color: lighten($body, 20%);
+		}
+	}
+
+	.ninja-forms-required-items {
+		display: block;
+		margin: 0 0 rem-calc(5) 0;
+		font-size: 90%;
+		color: lighten($body, 20%);
+		font-style: italic;
+	}
+
+	.input-group {
+		margin-top: 1em;
+	}
+
+	.field-wrap {
+		margin-bottom: rem-calc(8) !important;
+
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+/**
+* #.# Datepicker
+*/
+.ui-datepicker-header {
+	background: $color-3;
+	color: #fff;
+}
+
+.ui-datepicker-calendar {
+	border: rem-calc(1) solid $color-3;
+}
+
+a.ui-state-default {
+	color: $color-3;
+	display: block;
+	padding: rem-calc(2);
+
+	&:hover,
+	&:focus {
+		background: $color-3;
+		color: #fff;
+	}
+}

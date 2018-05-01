@@ -1,0 +1,48 @@
+[18-Sep-2017 17:14:15 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[20-Sep-2017 06:42:25 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[21-Sep-2017 03:17:31 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[27-Sep-2017 22:24:48 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[28-Sep-2017 13:32:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[30-Sep-2017 07:34:28 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function body_class() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/header.php on line 10
+[08-Oct-2017 21:07:30 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function body_class() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/header.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/header.php on line 10
+[09-Oct-2017 23:33:50 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[13-Oct-2017 00:37:08 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function wp_safe_redirect() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/index.php on line 8
+[26-Oct-2017 05:28:14 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/404.php on line 8
+[10-Feb-2018 06:16:59 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function wp_footer() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/footer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/footer.php on line 9
+[10-Feb-2018 06:17:01 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function wp_footer() in /home/trcyshw4/public_html/wp-content/themes/trcyshw/footer.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/trcyshw4/public_html/wp-content/themes/trcyshw/footer.php on line 9

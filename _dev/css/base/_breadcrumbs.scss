@@ -1,0 +1,22 @@
+/**
+* #.# Yoast Breadcrumbs
+*/
+#breadcrumbs {
+	font-size: $font-size-small;
+	color: $body;
+	margin-bottom: $gutter;
+
+	i {
+		margin: 0 rem-calc(2);
+	}
+
+	a {
+		color: inherit;
+		border: 0;
+
+		&:hover,
+		&:focus {
+			color: $link-color-hover;
+		}
+	}
+}

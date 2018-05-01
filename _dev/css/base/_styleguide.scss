@@ -1,0 +1,117 @@
+/**
+* #.# Styleguide
+*/
+section#styleguide {
+
+	.container {
+
+		@include fp(padding-top,20,80);
+		@include fp(padding-bottom,20,80);
+		padding: rem-calc(20) 2%;
+
+		.row {
+			padding: rem-calc(20) 0;
+			border-bottom: rem-calc(1) solid $border-color;
+			display: block;
+
+			&:last-of-type {
+				border: none;
+			}
+
+			span.title {
+
+				@extend h3;
+				display: block;
+				margin-bottom: rem-calc(20);
+			}
+
+			strong {
+				font-weight: $fw-bold;
+			}
+
+			#fonts {
+				display: block;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: block;
+					font-weight: $fw-bold;
+
+					&:after {
+						font-weight: $fw-normal;
+						display: inline-block;
+					}
+
+					&.heading {
+
+						&:after {
+							content: "#{$font-heading-name}";
+						}
+					}
+
+					&.body {
+
+						&:after {
+							content: "#{$font-body-name}";
+						}
+					}
+				}
+			}
+
+			#colors {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					padding: rem-calc(40);
+					text-transform: uppercase;
+					text-align: center;
+					color: $white;
+					min-width: rem-calc(250);
+
+					&.primary {
+						background-color: $color-3;
+
+						&:after {
+							content: "#{$color-3}";
+							display: block;
+						}
+					}
+
+					&.secondary {
+						background-color: $color-2;
+
+						&:after {
+							content: "#{$color-2}";
+							display: block;
+						}
+					}
+
+					&.accent {
+						background-color: $color-1;
+
+						&:after {
+							content: "#{$color-1}";
+							display: block;
+						}
+					}
+
+					&.body {
+						background-color: $body;
+
+						&:after {
+							content: "#{$body}";
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

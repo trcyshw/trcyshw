@@ -1,0 +1,4 @@
+<?php /* For pulling introductory content when the H1 and lead paragraphs are separate from the main homepage content */ ?>
+<?php if (is_front_page() || is_page('home')) { /* Change page ID */ $page = get_post(217);$title = $page->wps_seotitle;$content = $page->post_content;$content = apply_filters('the_content',$page->post_content); ?><h1><?php echo $title; ?></h1><?php echo $content; ?><?php wp_reset_query(); }; ?>
+<?php /* Be sure to remove the H1 from the main content area on the homepage by adding the following to page.php or front-page.php: */ ?>
+<?php /* if (!is_front_page() && !is_page('home')) { ?><h1><?php if (function_exists('the_seotitle')){ $seotitle = the_seotitle('','',false); if (!empty($seotitle)) {echo $seotitle;} else {the_title();}} else {the_title();} ?></h1><?php }; */ ?>

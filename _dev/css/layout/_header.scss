@@ -1,0 +1,44 @@
+/*==============================================================================
+	HEADER
+==============================================================================*/
+header {
+	position: relative;
+	margin: 0;
+	z-index: 100;
+
+	.container {
+		padding-top: rem-calc(20);
+		padding-bottom: rem-calc(20);
+
+		#logo {
+
+			a.logo {
+				width: 100%;
+				display: block;
+				margin: 0 auto;
+
+				@include bp($tablet-portrait) {
+					margin: 0;
+					max-width: 100%;
+				}
+
+				img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+
+					@include bp($tablet-portrait) {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		#details {
+
+			text-align: right;
+			display: block;
+			list-style: none;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+/**
+* #.# Addresses
+*
+* Styling for address fields
+*/
+
+main {
+
+	address {
+		margin: 0 0 rem-calc(20);
+
+		&.postal-address {
+			border-top: rem-calc(1) solid rgba($border-color, 0.5);
+			padding: rem-calc(20) 0 0;
+
+			@include fp(padding-top,20,35);
+			@include fp(margin-top,20,35);
+
+			&:before {
+				content: "Postal Address";
+				display: block;
+				font-weight: $fw-bold;
+			}
+		}
+
+		div {
+
+			&[itemprop="name"] {
+				font-weight: $fw-bold;
+				margin-bottom: rem-calc(10);
+			}
+
+			&[itemprop="addressLocality"],
+			&[itemprop="addressRegion"],
+			&[itemprop="postalCode"] {
+				display: inline-block;
+			}
+
+			&[itemprop="postalCode"] {
+				margin-bottom: rem-calc(5);
+			}
+
+			&[itemprop="telephone"],
+			&[itemprop="faxNumber"],
+			&[itemprop="email"] {
+				margin-bottom: rem-calc(5);
+
+				&:before {
+					font-weight: $fw-bold;
+				}
+			}
+
+			&[itemprop="telephone"] {
+
+				&:before {
+					content: "T: ";
+				}
+			}
+
+			&[itemprop="faxNumber"] {
+
+				&:before {
+					content: "F: ";
+				}
+			}
+
+			&[itemprop="email"] {
+				word-break: break-word;
+
+				&:before {
+					content: "E: ";
+				}
+			}
+		}
+
+		ul.hours {
+			margin: rem-calc(20) 0 0;
+			list-style: none;
+
+			li {
+				padding: rem-calc(3) 0;
+				margin: 0;
+				border-bottom: rem-calc(1) dotted lighten($border-color, 15%);
+
+				&:before {
+					content: "";
+					display: none;
+				}
+
+				&.title {
+					color: $color-1;
+					padding: 0;
+					border: none;
+					font-family: $font-heading;
+					font-size: 110%;
+				}
+
+				span {
+					display: inline-block;
+					width: 49.5%;
+
+					&.time {
+						text-align: right;
+					}
+				}
+
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+	}
+}

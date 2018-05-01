@@ -1,0 +1,53 @@
+#error404 {
+	align-items: flex-end;
+	display: flex;
+	height: 100%;
+	position: relative;
+	width: 100%;
+
+	@include from($pint) {
+		align-content: flex-end;
+		align-items: center;
+	}
+
+	.inner {
+		padding: rem(60);
+		text-align: center;
+
+		@include from($pint) {
+			margin: 0 0 0 auto;
+			width: 50%;
+		}
+
+		span {
+			color: $white;
+			display: block;
+			text-transform: lowercase;
+
+			&.title {
+				font-size: 350%;
+				margin: 0 0 rem(30);
+			}
+
+			&.text {
+				font-size: 150%;
+
+				a {
+
+				}
+
+			}
+		}
+
+	}
+
+	.credit {
+		bottom: rem(10);
+		box-shadow: none;
+		color: rgba($white, 0.5);
+		font-size: 75%;
+		position: fixed;
+		right: rem(10);
+		text-decoration: none;
+	}
+}

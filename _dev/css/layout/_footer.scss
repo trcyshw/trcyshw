@@ -1,0 +1,83 @@
+/*==============================================================================
+	FOOTER
+==============================================================================*/
+
+footer {
+	background: $color-2;
+	//background: $color-1;
+
+	.container {
+		padding: rem-calc(30) 2%;
+
+		ul {
+			font-size: 0;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+
+			@include bp($tablet-portrait) {
+				text-align: left;
+			}
+
+			li {
+				color: rgba($white, 0.7);
+				display: inline-block;
+				font-size: rem-calc(12);
+				line-height: rem-calc(20);
+				padding: 0 rem-calc(10);
+
+				@include bp($tablet-portrait) {
+					padding: 0 rem-calc(15) 0 0;
+				}
+
+				text-transform: uppercase;
+
+				a {
+					border-width: 0;
+					box-shadow: none;
+					color: rgba($white, 0.7);
+					display: block;
+					text-decoration: none;
+
+					&:hover,
+					&:focus {
+						color: $white;
+					}
+				}
+			}
+
+			&.goop {
+
+				@include bp($tablet-portrait) {
+					padding: 0 0 0 rem-calc(15);
+					text-align: right;
+				}
+
+				a {
+
+					span {
+						margin-left: rem-calc(5);
+						transition: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+* #.# Scroll to top
+*/
+#scroll {
+	bottom: rem-calc(10);
+	color: darken($body, 10);
+	cursor: pointer;
+	display: none;
+	font-size: rem-calc(25);
+	opacity: 0.5;
+	padding: 0;
+	position: fixed;
+	right: rem-calc(10);
+	z-index: 10000;
+}

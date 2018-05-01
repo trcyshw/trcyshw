@@ -1,0 +1,17 @@
+.child-page {
+
+	@include fp(padding-bottom, 10, 20);
+	@include fp(margin-bottom, 10, 20);
+	border-bottom: rem-calc(1) solid $border-color;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0 auto rem-calc(20); 
+	}
+
+	.twelve {
+		padding-left: rem-calc(20);
+	}
+}
