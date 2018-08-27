@@ -1,0 +1,36 @@
+body.role-author .welcome-panel .welcome-panel-close {
+	display: none !important;
+}
+
+/* Hide themes menu */
+body.role-author #menu-appearance {
+	display: none !important;
+}
+
+body.role-author #toplevel_page_ts_digital_siteplan {
+	display: none !important;
+}
+
+/* Hide SEO stuff */
+body.role-author #seometadata_metabox,
+body.role-author #goop-siteplan-page-notes-meta-box {
+	display: none !important;
+}
+
+body.role-author #the_seotitle {
+	background-color: transparent;
+	cursor: default !important;
+}
+
+body.role-author #the_seotitle:focus {
+	border-color: #ddd !important;
+	box-shadow: none !important;
+}
+
+body.role-author #analytics.postbox {
+	display: none !important;
+}
+
+body.role-author #sender.postbox {
+	display: none !important;
+}

@@ -1,0 +1,21 @@
+/* For our ACF SEO fields */
+.metadata-title-max {
+	margin-top: 3px;
+}
+
+.metadata-title-max,
+.metadata-description-max {
+	font-size: 85%;
+	text-align: right;
+}
+
+.form-table#metadata_tax {
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	margin: 40px 0 0;
+}
+
+.form-table#metadata_tax th {
+	padding: 20px 10px 20px 20px;
+}
