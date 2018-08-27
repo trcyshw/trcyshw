@@ -1,0 +1,450 @@
+{
+	"key": "group_5b62a7e1a1b02",
+	"title": "Media Sizes",
+	"fields": [
+			{
+					"key": "field_5b62a7f51a847",
+					"label": "",
+					"name": "media_sizes",
+					"type": "group",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+					},
+					"layout": "block",
+					"sub_fields": [
+							{
+									"key": "field_5b62aaadcb116",
+									"label": "Default",
+									"name": "default",
+									"type": "group",
+									"instructions": "",
+									"required": 0,
+									"conditional_logic": 0,
+									"wrapper": {
+											"width": "",
+											"class": "",
+											"id": ""
+									},
+									"layout": "block",
+									"sub_fields": [
+											{
+													"key": "field_5b62a8a51a848",
+													"label": "Thumbnail",
+													"name": "thumbnail",
+													"type": "group",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"layout": "table",
+													"sub_fields": [
+															{
+																	"key": "field_5b62aa60cb115",
+																	"label": "Name",
+																	"name": "name",
+																	"type": "text",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": "thumbnail",
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"maxlength": ""
+															},
+															{
+																	"key": "field_5b62a8f11a849",
+																	"label": "Height",
+																	"name": "height",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 150,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62a9001a84a",
+																	"label": "Width",
+																	"name": "width",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 150,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62ac4f199f1",
+																	"label": "Crop",
+																	"name": "crop",
+																	"type": "true_false",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"message": "",
+																	"default_value": 1,
+																	"ui": 0,
+																	"ui_on_text": "",
+																	"ui_off_text": ""
+															}
+													]
+											},
+											{
+													"key": "field_5b62ab48cb118",
+													"label": "Medium",
+													"name": "medium",
+													"type": "group",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"layout": "table",
+													"sub_fields": [
+															{
+																	"key": "field_5b62ab49cb119",
+																	"label": "Name",
+																	"name": "name",
+																	"type": "text",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": "medium",
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"maxlength": ""
+															},
+															{
+																	"key": "field_5b62ab49cb11a",
+																	"label": "Height",
+																	"name": "height",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 300,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62ab49cb11b",
+																	"label": "Width",
+																	"name": "width",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 300,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62ac77199f2",
+																	"label": "Crop",
+																	"name": "crop",
+																	"type": "true_false",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"message": "",
+																	"default_value": 0,
+																	"ui": 0,
+																	"ui_on_text": "",
+																	"ui_off_text": ""
+															}
+													]
+											},
+											{
+													"key": "field_5b62ab58cb11c",
+													"label": "Large",
+													"name": "large",
+													"type": "group",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"layout": "table",
+													"sub_fields": [
+															{
+																	"key": "field_5b62ab58cb11d",
+																	"label": "Name",
+																	"name": "name",
+																	"type": "text",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": "large",
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"maxlength": ""
+															},
+															{
+																	"key": "field_5b62ab58cb11e",
+																	"label": "Height",
+																	"name": "height",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 1024,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62ab58cb11f",
+																	"label": "Width",
+																	"name": "width",
+																	"type": "number",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"default_value": 1024,
+																	"placeholder": "",
+																	"prepend": "",
+																	"append": "",
+																	"min": "",
+																	"max": "",
+																	"step": ""
+															},
+															{
+																	"key": "field_5b62ac8d199f3",
+																	"label": "Crop",
+																	"name": "crop",
+																	"type": "true_false",
+																	"instructions": "",
+																	"required": 0,
+																	"conditional_logic": 0,
+																	"wrapper": {
+																			"width": "",
+																			"class": "",
+																			"id": ""
+																	},
+																	"message": "",
+																	"default_value": 0,
+																	"ui": 0,
+																	"ui_on_text": "",
+																	"ui_off_text": ""
+															}
+													]
+											}
+									]
+							},
+							{
+									"key": "field_5b62abc3199ef",
+									"label": "Custom",
+									"name": "custom",
+									"type": "repeater",
+									"instructions": "",
+									"required": 0,
+									"conditional_logic": 0,
+									"wrapper": {
+											"width": "",
+											"class": "",
+											"id": ""
+									},
+									"collapsed": "",
+									"min": 0,
+									"max": 0,
+									"layout": "table",
+									"button_label": "",
+									"sub_fields": [
+											{
+													"key": "field_5b62aca7199f4",
+													"label": "Name",
+													"name": "name",
+													"type": "text",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"default_value": "",
+													"placeholder": "",
+													"prepend": "",
+													"append": "",
+													"maxlength": ""
+											},
+											{
+													"key": "field_5b62acba199f5",
+													"label": "Height",
+													"name": "height",
+													"type": "number",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"default_value": "",
+													"placeholder": "",
+													"prepend": "",
+													"append": "",
+													"min": "",
+													"max": "",
+													"step": ""
+											},
+											{
+													"key": "field_5b62acd1199f6",
+													"label": "Width",
+													"name": "width",
+													"type": "number",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"default_value": "",
+													"min": "",
+													"max": "",
+													"step": "",
+													"placeholder": "",
+													"prepend": "",
+													"append": ""
+											},
+											{
+													"key": "field_5b62acdb199f7",
+													"label": "Crop",
+													"name": "crop",
+													"type": "true_false",
+													"instructions": "",
+													"required": 0,
+													"conditional_logic": 0,
+													"wrapper": {
+															"width": "",
+															"class": "",
+															"id": ""
+													},
+													"message": "",
+													"default_value": 0,
+													"ui": 0,
+													"ui_on_text": "",
+													"ui_off_text": ""
+											}
+									]
+							}
+					]
+			}
+	],
+	"location": [
+			[
+					{
+							"param": "options_page",
+							"operator": "==",
+							"value": "acf-options-media-sizes"
+					}
+			]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": 1,
+	"description": "",
+	"modified": 1533193644
+}

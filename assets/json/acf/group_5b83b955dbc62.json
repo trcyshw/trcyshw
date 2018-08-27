@@ -1,0 +1,43 @@
+{
+    "key": "group_5b83b955dbc62",
+    "title": "Previous Work",
+    "fields": [
+        {
+            "key": "field_5b83b969dda77",
+            "label": "Previous Work",
+            "name": "_previous_work",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "8"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Short description for previous work section",
+    "modified": 1535363478
+}

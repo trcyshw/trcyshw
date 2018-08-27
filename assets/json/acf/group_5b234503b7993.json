@@ -1,0 +1,123 @@
+{
+	"key": "group_5b234503b7993",
+	"title": "Scripts",
+	"fields": [
+			{
+					"key": "field_5b234515f47f5",
+					"label": "Google Analytics",
+					"name": "google_analytics",
+					"type": "textarea",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"maxlength": "",
+					"rows": "",
+					"new_lines": ""
+			},
+			{
+					"key": "field_5b234f00146e1",
+					"label": "Header Scripts",
+					"name": "scripts_head",
+					"type": "repeater",
+					"instructions": "If you have a script for inserting into your site's <head> tag, add it here.",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+					},
+					"collapsed": "",
+					"min": 0,
+					"max": 0,
+					"layout": "table",
+					"button_label": "",
+					"sub_fields": [
+							{
+									"key": "field_5b234f66146e2",
+									"label": "Script",
+									"name": "script",
+									"type": "textarea",
+									"instructions": "",
+									"required": 0,
+									"conditional_logic": 0,
+									"wrapper": {
+											"width": "",
+											"class": "",
+											"id": ""
+									},
+									"default_value": "",
+									"placeholder": "",
+									"maxlength": "",
+									"rows": "",
+									"new_lines": ""
+							}
+					]
+			},
+			{
+					"key": "field_5b234f98146e3",
+					"label": "Footer Scripts",
+					"name": "scripts_footer",
+					"type": "repeater",
+					"instructions": "If you have a script for inserting at the end of your site's <\/body> tag, add it here.",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+							"width": "",
+							"class": "",
+							"id": ""
+					},
+					"collapsed": "",
+					"min": 0,
+					"max": 0,
+					"layout": "table",
+					"button_label": "",
+					"sub_fields": [
+							{
+									"key": "field_5b234f98146e4",
+									"label": "Script",
+									"name": "script",
+									"type": "textarea",
+									"instructions": "",
+									"required": 0,
+									"conditional_logic": 0,
+									"wrapper": {
+											"width": "",
+											"class": "",
+											"id": ""
+									},
+									"default_value": "",
+									"placeholder": "",
+									"maxlength": "",
+									"rows": "",
+									"new_lines": ""
+							}
+					]
+			}
+	],
+	"location": [
+			[
+					{
+							"param": "options_page",
+							"operator": "==",
+							"value": "acf-options-scripts"
+					}
+			]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "seamless",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": 1,
+	"description": "Google Analytics and other site-wide scripts",
+	"modified": 1529041740
+}
