@@ -1,0 +1,264 @@
+.content__websites {
+	background-color: $white;
+	padding: 3em 0;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+
+	h2 {
+		text-align: center;
+	}
+
+	&__introduction {
+		margin: 0 auto 2em;
+		max-width: rc(1100);
+		padding: 0 5%;
+	}
+
+	&__loading {
+		color: lighten($brand1, 50);
+		font-size: 175%;
+	}
+
+	&__show-more .btn {
+		font-size: 110%;
+		width: rc(275);
+	}
+
+	&__websites-list {
+		margin: 0 auto 2em;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+
+		.website {
+			float: left;
+			padding: 0;
+			position: relative;
+
+			@media only screen and (max-width: 530px) {
+				width: 50%;
+
+				&:nth-of-type(2n+2) .website__detail {
+					margin-left: -100%;
+				}
+
+				&:nth-of-type(2n+3) {
+					clear: left;
+				}
+			}
+
+			@media only screen and (min-width: 531px) and (max-width: 767px) {
+				width: 33.33%;
+
+				&:nth-of-type(3n+2) .website__detail {
+					margin-left: -100%;
+				}
+
+				&:nth-of-type(3n+3) .website__detail {
+					margin-left: -200%;
+				}
+
+				&:nth-of-type(3n+4) {
+					clear: left;
+				}
+			}
+
+			@media only screen and (min-width: 768px) and (max-width: 1023px) {
+				width: 25%;
+
+				&:nth-of-type(4n+2) .website__detail {
+					margin-left: -100%;
+				}
+
+				&:nth-of-type(4n+3) .website__detail {
+					margin-left: -200%;
+				}
+
+				&:nth-of-type(4n+4) .website__detail {
+					margin-left: -300%;
+				}
+
+				&:nth-of-type(4n+5) {
+					clear: left;
+				}
+			}
+
+			@media only screen and (min-width: 1024px) {
+				width: 16.66%;
+
+				&:nth-of-type(6n+2) .website__detail {
+					margin-left: -100%;
+				}
+
+				&:nth-of-type(6n+3) .website__detail {
+					margin-left: -200%;
+				}
+
+				&:nth-of-type(6n+4) .website__detail {
+					margin-left: -300%;
+				}
+
+				&:nth-of-type(6n+5) .website__detail {
+					margin-left: -400%;
+				}
+
+				&:nth-of-type(6n+6) .website__detail {
+					margin-left: -500%;
+				}
+
+				&:nth-of-type(6n+7) {
+					clear: left;
+				}
+			}
+
+			&__image {
+				cursor: pointer;
+				overflow: hidden;
+				padding: 0;
+
+				span {
+
+					@include overlay-hover($brand1, 0.5);
+					background-color: lighten($black, 95);
+					background-position: top center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					display: block;
+					height: auto;
+					margin: 0 auto;
+					max-width: 100%;
+					padding: 35% 50%;
+					position: relative;
+					transition: $ease;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+
+			&__detail {
+
+				@include row(center);
+				align-items: center;
+				background-color: $brand1;
+				box-sizing: content-box;
+				margin: initial;
+				max-height: 0;
+				overflow: hidden;
+				padding: 0;
+				position: relative;
+				text-align: left;
+				transition: max-height 0.3s ease-in-out;
+				width: 100%;
+
+				@media only screen and (max-width: 530px) {
+					width: 200%;
+				}
+
+				@media only screen and (min-width: 531px) {
+					width: 300%;
+				}
+
+				@media only screen and (min-width: 768px) {
+					width: 400%;
+				}
+
+				@media only screen and (min-width: 1024px) {
+					width: 600%;
+				}
+
+				&__image {
+					background-color: lighten($black, 95);
+					background-position: top center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					display: block;
+					height: auto;
+					margin: 0 auto;
+					max-width: 100%;
+					padding: 35% 50%;
+				}
+
+				&__close {
+					color: rgba($white, 0.25);
+					font-size: rc(30);
+					line-height: 1;
+					position: absolute;
+					right: rc(14);
+					text-decoration: none;
+					top: rc(7);
+					transition: $ease;
+					z-index: 1;
+
+					&:before {
+						content: "×";
+					}
+
+					&:hover {
+						color: $white;
+					}
+				}
+
+				.col {
+					color: $white;
+					max-width: rc(960);
+					padding: 2em 2em 0;
+					width: 100%;
+
+					&:nth-of-type(even) {
+						padding: 2em;
+					}
+
+					@include md {
+						padding: 2em;
+						width: 50%;
+					}
+
+					.website__development {
+						display: block;
+						font-size: 80%;
+						margin: 1em 0 2em;
+						text-transform: lowercase;
+					}
+
+					.website__industry {
+						display: block;
+						font-size: 80%;
+						margin: 1em 0 2em;
+						text-transform: lowercase;
+
+						+ .website__development {
+							margin-top: -1em;
+						}
+					}
+				}
+			}
+
+			&.is-collapsed {
+
+				.website__detail {
+					max-height: 0;
+				}
+			}
+
+			&.is-expanded {
+
+				.website__image {
+
+					span {
+
+						@include overlay($brand1, 0.75);
+						filter: grayscale(100);
+						transform: scale(1.1);
+					}
+				}
+
+				.website__detail {
+					max-height: rc(9999);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,169 @@
+html,
+body {
+
+	@include font-smoothing(on);
+	color: $body;
+	font-family: $font-body;
+	font-size: $font-body-min;
+	font-weight: $fw-normal;
+	height: 100%;
+	line-height: $line-height;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+body {
+	background-color: $white;
+	z-index: 1;
+
+	&.no-scroll {
+		overflow: hidden;
+
+		&.mobile {
+
+			@include switch {
+				overflow: auto;
+			}
+		}
+	}
+
+	@include xxl {
+		font-size: $font-body-max;
+	}
+
+	.wrapper {
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overflow: hidden;
+
+		.content__page__extend {
+			color: $brand1;
+			cursor: pointer;
+			transition: $ease;
+
+			&:hover,
+			&:focus {
+				color: darken($brand1, 20);
+			}
+
+			&.invisible {
+				opacity: 0;
+			}
+		}
+
+		.content__page__extended {
+			max-height: 0;
+			overflow: hidden;
+			transition: $ease;
+
+			&.visible {
+				max-height: rc(9999);
+			}
+		}
+
+		.content__page__inner {
+			position: relative;
+
+			&.long {
+				max-height: rc(400);
+				overflow: hidden;
+				transition: all $ease;
+				z-index: 0;
+
+				@include md {
+					max-height: rc(99999);
+				}
+
+				&:after {
+					background: linear-gradient(to bottom, rgba($white, 0) 0%, rgba($white, 1) 100%);
+					bottom: 0;
+					content: "";
+					height: rc(150);
+					left: 0;
+					position: absolute;
+					right: 0;
+					transition: all $ease;
+					z-index: 1;
+
+					@include md {
+						display: none;
+					}
+				}
+			}
+
+			&.full-length {
+				max-height: rc(99999);
+
+				&:after {
+					opacity: 0;
+					z-index: 0;
+				}
+			}
+
+			.inner__more {
+
+				@include md {
+					display: none;
+				}
+
+				@include align-horizontal;
+				background-color: $white;
+				border: rc(1) solid lighten($black, 70);
+				bottom: rc(20);
+				color: lighten($black, 50);
+				content: "Read More";
+				cursor: pointer;
+				display: inline-block;
+				opacity: 0;
+				padding: 0.5em 1em;
+				transition: all $ease;
+				z-index: 0;
+
+				&:after {
+					content: "Read More";
+				}
+
+				&:hover,
+				&:focus {
+					color: lighten($black, 40);
+				}
+
+				&.visible {
+					opacity: 1;
+					z-index: 2;
+				}
+			}
+		}
+	}
+
+	/**
+	* #.# Scroll to top
+	*/
+	.site-footer__scroll-to-top {
+		bottom: rc(60); /* for mobile menu */
+		color: darken($body, 10);
+		cursor: pointer;
+		display: none;
+		font-size: rc(30);
+		opacity: 0.5;
+		padding: 0;
+		position: fixed;
+		right: rc(10);
+		z-index: 10000;
+
+		svg {
+			cursor: pointer;
+			display: block;
+			font-size: inherit;
+		}
+
+		@include md {
+			bottom: rc(10);
+		}
+	}
+}

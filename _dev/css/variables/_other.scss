@@ -1,0 +1,33 @@
+/**
+* #.# Breakpoints - see Breakpoint Mixin within _mixins.scss
+*/
+
+$xxs:																320px;
+$xs:																480px;
+$sm:																600px;
+$md:																768px;
+$lg:																960px;
+$xl:																1024px;
+$xxl:																1200px;
+$xxxl:															1920px;
+
+/**
+* #.# Use for consistent breakpoint across site (showing / hiding nav etc).
+*/
+$switch:															$md;
+
+/**
+* #.# Grid additions
+*/
+$gutter:														rc(20);
+
+/**
+* #.# Transitions
+*/
+$ease:												0.3s ease-in-out;
+
+/**
+* #.# Miscellaneous
+*/
+$border-radius:											0;
+$button-radius:											0;

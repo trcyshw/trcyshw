@@ -1,0 +1,36 @@
+.site-contact {
+
+	li {
+
+		a {
+
+			&:hover,
+			&:focus {
+
+				&[href*="mailto"] svg path {
+					fill: $brand2;
+				}
+
+				&[href*="facebook"] svg path {
+					fill: $facebook;
+				}
+
+				&[href*="github"] svg path {
+					fill: $github;
+				}
+
+				&[href*="instagram"] svg path {
+					fill: $instagram;
+				}
+
+				&[href*="linkedin"] svg path {
+					fill: $linkedin;
+				}
+
+				&[href*="twitter"] svg path {
+					fill: $twitter;
+				}
+			}
+		}
+	}
+}

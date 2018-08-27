@@ -1,0 +1,50 @@
+article.content__page--search {
+
+	.search-result {
+		border-top: rc(1) dotted $border-color;
+		margin: 0;
+		padding: 1.5em 0;
+
+		&:first-of-type {
+			border-top: none;
+			padding-top: 0;
+		}
+
+		&__excerpt {
+
+			h3 {
+				background: none;
+				padding: 0;
+				margin: 0 0 0.5em;
+
+				a {
+
+					&.search-result__title {
+						border: none;
+						box-shadow: none;
+						color: $body;
+						margin: 0;
+						padding: 0;
+						text-decoration: none;
+
+						&:hover,
+						&:focus {
+							color: $body;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ol,
+	p,
+	ul {
+
+		+ .search-result:first-of-type {
+			border-top: rc(1) dotted $border-color;
+			margin: 2em 0 0;
+			padding: 1.5em 0;
+		}
+	}
+}

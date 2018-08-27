@@ -1,0 +1,30 @@
+/**
+* #.# Typography - Heading / Body / Nav
+*/
+$font-heading-name:									"Poppins";
+$font-body-name:										"Poppins";
+
+$font-body:													#{$font-body-name}, sans-serif;
+$font-heading:											#{$font-heading-name}, sans-serif;
+$font-heading-transform:						none;
+$font-subheading:										$font-heading;
+$font-subheading-transform:					none;
+$font-nav:													$font-heading;
+$font-nav-dropdown:									$font-nav;
+$font-nav-transform:								uppercase;
+$font-button:												$font-heading;
+$font-button-transform:							uppercase;
+
+$font-body-min:											rc(15); /* set these for site-wide fp(font-size,min,max) sizes */
+$font-body-max:											rc(16);
+
+/**
+* #.# Weights and Heights
+*/
+$fw-normal:													300;
+$fw-bold:														500;
+$fw-button:													$fw-bold;
+$fw-heading:												$fw-bold;
+$fw-nav:														$fw-bold;
+$line-height:												1.4;
+$line-height-heading:								1.15;

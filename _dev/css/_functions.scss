@@ -1,10 +1,13 @@
-/**
- * Rem Calc function - from Zurb Foundation, licenced under MIT Open Source
- * This is the default html and body font-size for the base rem value.
- */
+//----------------------------------------------
+//  Rem Calc function - from Zurb Foundation, licenced under MIT Open Source
+//----------------------------------------------
+
+// This is the default html and body font-size for the base rem value.
 $rem-base: 16px !default;
 
-@function _strip-unit($num) { // Strips unit suffix from value.
+// Strips unit suffix from value
+
+@function _strip-unit($num) {
 
 	@if type-of($num) != "number" {
 
@@ -16,7 +19,9 @@ $rem-base: 16px !default;
 	@return $num / ($num * 0 + 1);
 }
 
-@function _convert-to-rem($value, $base-value: $rem-base) { // Converts to rem, utility for rem-calc.
+// Converts to rem, utility for rem-calc
+
+@function _convert-to-rem($value, $base-value: $rem-base) {
 
 	@if type-of($value) != "number" {
 
@@ -36,13 +41,15 @@ $rem-base: 16px !default;
 
 	@if (_strip-unit($value) == 0) {
 		$value: 0;
-		// Turn 0rem into 0.
 	}
+	// Turn 0rem into 0
 
 	@return $value;
 }
 
-@function rem($values, $base-value: $rem-base) { // Calculates rem value from number.
+// Calculates rem value from number - formerly rem-calc but it sucks to type
+
+@function rc($values, $base-value: $rem-base) {
 
 	@if type-of($values) != "number" {
 
@@ -57,12 +64,47 @@ $rem-base: 16px !default;
 
 		@return null;
 	}
+
 	$max: length($values);
 
 	@if $max == 1 {
 
 		@return _convert-to-rem(nth($values, 1), $base-value);
 	}
+
+	$remValues: ();
+
+	@for $i from 1 through $max {
+
+		$remValues: append($remValues, _convert-to-rem(nth($values, $i), $base-value));
+	}
+
+	@return $remValues;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+
+	@if type-of($values) != "number" {
+
+		@warn "values: #{$values} is not a number";
+
+		@return null;
+	}
+
+	@if type-of($base-value) != "number" {
+
+		@warn "base-value: #{$base-value} is not a number";
+
+		@return null;
+	}
+
+	$max: length($values);
+
+	@if $max == 1 {
+
+		@return _convert-to-rem(nth($values, 1), $base-value);
+	}
+
 	$remValues: ();
 
 	@for $i from 1 through $max {

@@ -1,0 +1,213 @@
+/**
+* #.# Styleguide
+*/
+.styleguide {
+
+	&__section {
+		border: dotted $border-color;
+		border-width: rc(1) 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 2em 0;
+	}
+
+	&__title {
+		display: block;
+		flex-basis: 100%;
+		font-size: 120%;
+		font-weight: $fw-bold;
+		margin: 0 0 0.5em;
+		opacity: 0.75;
+		padding: 0;
+
+		@include md {
+			flex-basis: 20%;
+			margin: 0;
+		}
+	}
+
+	&__buttons {
+
+		ul {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+
+				.btn {
+					margin: rc(3) rc(3) rc(3) 0;
+				}
+			}
+		}
+	}
+
+	&__colors {
+
+		ul {
+			display: flex;
+			align-items: flex-start;
+			flex-grow: 1;
+			flex-wrap: wrap;
+			font-size: 80%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				color: $white;
+				flex-grow: 1;
+				margin: 0;
+				padding: 2em 1.5em;
+				text-transform: uppercase;
+				text-align: center;
+
+				@include xs {
+					width: 50%;
+				}
+
+				@include md {
+					max-width: rc(250);
+					width: 25%;
+				}
+
+				&.brand1 {
+					background-color: $brand1;
+
+					&:after {
+						content: "#{$brand1}";
+						display: block;
+					}
+				}
+
+				&.brand2 {
+					background-color: $brand2;
+
+					&:after {
+						content: "#{$brand2}";
+						display: block;
+					}
+				}
+
+				&.brand3 {
+					background-color: $brand3;
+
+					&:after {
+						content: "#{$brand3}";
+						display: block;
+					}
+				}
+
+				&.body {
+					background-color: $body;
+
+					&:after {
+						content: "#{$body}";
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	&__fonts {
+
+		ul {
+			display: block;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: block;
+
+				strong {
+					display: inline-block;
+					min-width: rc(145);
+					position: relative;
+					white-space: nowrap;
+
+					&:after {
+						font-weight: $fw-normal;
+						display: inline-block;
+						left: 100%;
+						position: absolute;
+						white-space: nowrap;
+					}
+				}
+
+				&.fonts__heading {
+
+					strong {
+
+						&:after {
+							content: "#{$font-heading-name}";
+						}
+					}
+				}
+
+				&.fonts__body {
+
+					strong {
+
+						&:after {
+							content: "#{$font-body-name}";
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__images {
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			&:before {
+				content: "Minimum sizes for this site's images.";
+				display: block;
+				margin: 0 0 1em;
+			}
+		}
+	}
+
+	&__pagination {
+
+		.pagination {
+			flex-basis: auto;
+			flex-grow: 1;
+			width: auto;
+		}
+	}
+
+	&__typography {
+
+		.block {
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin-bottom: rc(10);
+				text-align: left;
+			}
+
+			small,
+			small.meta,
+			time {
+				display: initial;
+				margin: 0 0 rc(10);
+				padding: 0;
+			}
+		}
+	}
+
+}

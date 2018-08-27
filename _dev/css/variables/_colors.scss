@@ -1,0 +1,47 @@
+/**
+* #.# Colours
+*/
+$brand1:														rgb(57, 58, 61);
+$brand2:														rgb(217, 0, 72);
+$brand3:														rgb(93, 158, 155);
+$brand4:														rgb(200, 219, 191);
+$brand5:														rgb(224, 252, 235);
+
+$black:															rgb(0, 0, 0);
+$body:															$brand1;
+$grey:															rgb(55, 55, 55);
+$white:															rgb(255, 255, 255);
+
+/**
+* #.# Links
+*/
+$link-color:												$white;
+$link-color-hover:									$brand2;
+
+/**
+* #.# Navigation Colours
+*/
+$nav-l1:														$brand1;
+$nav-l1-hover:											$brand2;
+
+/**
+* #.# Message colours
+*/
+$error:															rgb(216, 0, 12);
+$information:												rgb(0, 82, 155);
+$success:														rgb(79, 138, 16);
+$warning:														rgb(159, 96, 0);
+
+/**
+* #.# Other element colours
+*/
+$border-color:											lighten($body, 60);
+
+/**
+* #.# Social media colours
+*/
+$facebook:													rgb(59, 89, 152);
+$github:														rgb(33, 31, 31);
+$instagram:													rgb(63, 114, 155);
+$linkedin:													rgb(0, 127, 177);
+$twitter:														rgb(0, 172, 237);

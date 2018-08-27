@@ -1,0 +1,170 @@
+/**
+* #.# Addresses
+*
+* Styling for address fields
+*/
+
+article {
+
+	address {
+		margin: 0 0 1.5em;
+		max-width: rc(600);
+
+		a[href^="tel"],
+		div {
+			color: inherit;
+			display: block;
+
+			&[itemprop="name"] {
+				font-size: 110%;
+				font-weight: $fw-bold;
+				margin-bottom: 0.5em;
+			}
+
+			&[itemprop="addressLocality"],
+			&[itemprop="addressRegion"],
+			&[itemprop="postalCode"] {
+				display: inline-block;
+				margin-right: 0.25em;
+			}
+
+			&[itemprop="postalCode"] {
+				margin-bottom: 0.5em;
+			}
+
+			&[itemprop="telephone"],
+			&[itemprop="faxNumber"],
+			&[itemprop="email"] {
+				margin-bottom: 0.35em;
+				padding-left: rc(30);
+				position: relative;
+
+				&[data-name]:before {
+					content: attr(data-name) ": ";
+				}
+
+				&:after,
+				svg.svg-inline--fa {
+
+					@include align-vertical;
+					display: inline-block;
+					font-size: 90%;
+					left: 0;
+					opacity: 0.5;
+					width: rc(20);
+				}
+			}
+
+			&[itemprop="telephone"] {
+
+				span {
+					display: inline-block;
+					white-space: nowrap;
+				}
+
+				&:after {
+
+					@include icon-l("\f095");
+				}
+			}
+
+			&[itemprop="faxNumber"] {
+
+				&:after {
+
+					@include icon-l("\f1ac");
+				}
+			}
+
+			&[itemprop="email"] {
+				word-break: break-word;
+
+				&:after {
+
+					@include icon-l("\f1fa");
+				}
+			}
+		}
+
+		ul.hours {
+			margin: 1.5em 0 0;
+			padding: 0;
+			list-style: none;
+
+			&:before {
+				content: "Business Hours";
+				display: block;
+				font-family: $font-heading;
+				font-weight: $fw-bold;
+				padding: 0;
+			}
+
+			&.other {
+
+				&:before {
+					content: "";
+					display: none;
+				}
+			}
+
+			li {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				padding: 0.15em 0;
+				margin: 0;
+				border-bottom: rc(1) dotted lighten($border-color, 15);
+
+				&:before {
+					content: "";
+					display: none;
+				}
+
+				span {
+					display: block;
+
+					&.day {
+						padding-right: 0.15em;
+					}
+
+					&.time {
+						white-space: nowrap;
+					}
+				}
+
+				&:last-of-type {
+					border: none;
+				}
+			}
+		}
+
+		div.notes {
+			margin: 1.5em 0 0;
+			list-style: none;
+
+			&:before {
+				content: "Other Information";
+				display: none;
+				font-family: $font-heading;
+				font-weight: $fw-bold;
+				padding: 0;
+			}
+		}
+	}
+
+	.type-business_address + .postal-address {
+
+		address {
+			border-top: rc(1) solid rgba($border-color, 0.5);
+			margin-top: 2em;
+			padding: 2em 0 0;
+
+			&:before {
+				content: "Postal Address";
+				display: block;
+				font-size: 110%;
+				font-weight: $fw-bold;
+			}
+		}
+	}
+}

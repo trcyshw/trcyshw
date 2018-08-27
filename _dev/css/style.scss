@@ -1,76 +1,68 @@
-/*!
-Theme Name: trcyshw
-Author: Tracey Shaw
-Author URI: http://www.trcyshw.com/
-Description: Custom WordPress theme for me!
-Text Domain: trcyshw
-Version: 1.0
-*/
-
-/**
- * SASS Core
- */
+// Core
 @import "functions";
+@import "normalise";
+
+// Variables
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/other";
+
+// Core
 @import "mixins";
-@import "variables";
+@import "typography";
 
-/**
- * Imports
- */
-@import "base/base";
-@import "base/body";
-@import "base/grid";
-@import "base/links";
-@import "layout/sections";
-@import "base/error404";
-// @import "base/child-pages";
-//
-// @import "base/address";
-// @import "base/typography";
-// @import "base/links";
-// @import "base/nav";
-// @import "base/nav-responsive";
-// @import "base/buttons";
-// @import "base/messages";
-// @import "base/forms";
-// @import "base/iframes";
-// @import "base/images";
-// @import "base/pagination";
-// @import "base/styleguide";
-// @import "base/tables";
-// @import "base/lightbox";
-// @import "base/gallery";
+// Navigation
+//@import "nav/main";
+//@import "nav/mobile";
 
-//----------------------------------------------
-//  Layout
-//----------------------------------------------
-// @import "layout/header";
-// @import "layout/sections";
-// @import "layout/sidebar";
-// @import "layout/excerpts";
-// @import "layout/footer";
+// Components
+// @import "components/messages";
+// @import "components/address";
+// @import "components/banner";
+@import "components/buttons";
+// @import "components/forms";
+// @import "components/gallery";
+@import "components/header";
+// @import "components/iframes";
+// @import "components/images";
+// @import "components/lightbox";
+@import "components/links";
+// @import "components/pagination";
+// @import "components/search";
+// @import "components/sidebar";
+// @import "components/slider";
+@import "components/social";
+// @import "components/utilities";
+@import "components/websites";
 
-//----------------------------------------------
-//  Features
-//----------------------------------------------
-//@import "features/accordions";
-//@import "features/events";
-//@import "features/carousel";
-//@import "features/mailchimp";
-//@import "features/mobile-cta";
-//@import "features/reviews";
-//@import "features/search";
-//@import "features/slider";
-//@import "features/staff";
-//@import "features/woocommerce";
+// Vendor-specific
+// @import "vendor/gravity-forms";
+// @import "vendor/slick-slider";
 
+// Pages
+// @import "pages/blog";
+// @import "pages/children";
+// @import "pages/front";
+@import "pages/page";
+// @import "pages/search-results";
+// @import "pages/styleguide";
 
-//----------------------------------------------
-//  Misc
-//----------------------------------------------
-//@import "global";
+// Parts.
+@import "common";
+@import "grid";
 
-//----------------------------------------------
-//  Overrides
-//----------------------------------------------
-//@import "overrides/ie";
+// Extras
+//@import "extras/modal";
+// Extras - as at 18/07/17 these have not been rewritten yet
+//@import "extras/accordions";
+//@import "extras/events";
+//@import "extras/carousel";
+//@import "extras/mailchimp";
+//@import "extras/reviews";
+//@import "extras/slider";
+//@import "extras/staff";
+//@import "extras/woocommerce";
+
+// Overrides
+// @import "overrides/ie";
+

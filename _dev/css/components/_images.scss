@@ -1,0 +1,68 @@
+// Images
+article {
+
+	figure,
+	figure.img {
+		background-color: rgba($body, 0.05);
+		display: block;
+		font-size: 100%;
+		margin: rc(20) 0;
+		padding: rc(10);
+		text-align: center;
+
+		@include md {
+			background-color: transparent;
+			display: initial;
+			padding: 0;
+			text-align: left;
+
+			&.aligncenter {
+				display: block;
+				margin: rc(20) auto;
+			}
+
+			&.alignright {
+				float: right;
+				margin: 0 0 rc(20) rc(20);
+			}
+
+			&.alignleft {
+				float: left;
+				margin: 0 rc(20) rc(20) 0;
+			}
+		}
+
+		&.wp-caption {
+			display: block;
+			margin: rc(20) 0;
+
+			@include md {
+				display: inline-block;
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+
+			@include md {
+				display: inline-block;
+			}
+
+			&.fullwidth-image {
+				display: block;
+				height: auto;
+				margin: 0;
+				width: 100%;
+			}
+		}
+
+		figcaption {
+			font-size: 75%;
+			padding: rc(5) 0;
+			opacity: 0.8;
+		}
+	}
+}

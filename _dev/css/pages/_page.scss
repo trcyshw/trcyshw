@@ -1,0 +1,142 @@
+.site-hero {
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+
+	.fa-angle-down {
+
+		@include align-horizontal;
+		bottom: rc(20);
+		color: $white;
+		font-size: 120%;
+		text-align: center;
+	}
+
+	&__inner {
+		color: $white;
+		max-width: rc(600);
+		padding: 0 5%;
+		position: relative;
+		text-align: center;
+		z-index: 1;
+
+		&__title {
+			font-size: 220%;
+		}
+
+		&__subtitle {
+			font-size: 150%;
+		}
+	}
+}
+
+.content__profile {
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
+
+	h2 {
+		text-align: center;
+	}
+
+	&__photo {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: rc(1) solid rgba($brand1, 0.5);
+		border-radius: 50%;
+		height: rc(120);
+		margin: 0 auto 2em;
+		width: rc(120);
+	}
+
+	.container {
+		color: $white;
+		padding: 3em 5%;
+	}
+}
+
+.content__404 {
+	align-items: flex-end;
+	display: flex;
+	height: 100vh;
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
+
+	@include md {
+		align-items: center;
+	}
+
+	.container {
+		color: $white;
+		font-size: 130%;
+		padding: 3em 5%;
+
+		@include md {
+			padding-left: 50%;
+		}
+	}
+
+	a.content__404__credit {
+		bottom: rc(10);
+		font-size: 80%;
+		position: absolute;
+		right: rc(10);
+	}
+}
+
+.site-background {
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+	z-index: 0;
+
+	span {
+
+		@include overlay($brand1, 0.75);
+		background-image: url(../img/backgrounds/hero-bw.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 100vh;
+		width: 100%;
+	}
+
+	&:after {
+		background: linear-gradient(to right top, rgba($brand2, 0.15) -20%, rgba($brand1, 0.5) 40%, rgba($brand1, 0.7) 100%);
+		bottom: 0;
+		content: "";
+		left: 0;
+		opacity: 1;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: $ease;
+		z-index: 0;
+	}
+
+	.error404 & {
+
+		span {
+			background-image: url(../img/backgrounds/404.jpg);
+			background-position: top left;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}

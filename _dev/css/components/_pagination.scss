@@ -1,0 +1,130 @@
+/**
+* #.# Pagination
+*/
+article {
+
+	.pagination,
+	.woocommerce-pagination {
+		display: flex;
+		flex-basis: 100%;
+		margin: 0;
+		max-width: 100%;
+		padding: 0;
+		width: 100%;
+
+		ul.page-numbers {
+			align-items: center;
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+
+				@include btn;
+				font-size: rc(12);
+				margin: 0 rc(2) rc(2) 0;
+				min-height: rc(28);
+				min-width: rc(28);
+				overflow: hidden;
+				padding: 0;
+				text-align: center;
+
+				a,
+				.page-numbers {
+					color: inherit;
+					display: block;
+					height: rc(28);
+					line-height: rc(28);
+					position: relative;
+
+					.fal,
+					svg.svg-inline--fa {
+
+						@include align-center;
+						font-size: rc(16);
+					}
+
+				 	&.current {
+
+						@include btn-hover;
+					}
+				}
+			}
+		}
+
+		// Single Posts
+		&.single {
+
+			ul {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				margin: rc(10) 0 0;
+				padding: 0;
+				width: 100%;
+
+				li {
+					display: inline-block;
+					font-size: 0;
+					margin: 0;
+					text-align: left;
+					text-transform: uppercase;
+					width: 50%;
+
+					a {
+						color: $brand1;
+						position: relative;
+
+						&:hover,
+						&:focus {
+							color: $brand2;
+						}
+					}
+
+					&.newer {
+
+						a {
+							padding-right: rc(17);
+						}
+					}
+
+					&.older {
+
+						a {
+							padding-left: rc(17);
+						}
+					}
+
+					svg.svg-inline--fa {
+
+						@include align-vertical;
+						font-size: rc(22);
+
+						&.fa-angle-left {
+							left: 0;
+						}
+
+						&.fa-angle-right {
+							right: 0;
+						}
+					}
+
+					a {
+						box-shadow: none;
+						display: inline-block;
+						text-align: center;
+
+						i {
+							margin: 0;
+						}
+					}
+
+					&.newer {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

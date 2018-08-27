@@ -1,0 +1,223 @@
+/**
+* #.# Forms
+*/
+
+main {
+
+	.col-8.form {
+
+		&:nth-child(2) {
+			padding: rc(30) 0;
+		}
+
+		@include md {
+
+			&:nth-child(1) {
+				padding: 0 rc(30) 0 0;
+			}
+
+			&:nth-child(2) {
+				padding: 0 0 0 rc(30);
+			}
+		}
+	}
+
+	form,
+	.nf-form-layout {
+
+		label {
+			font-size: 85%;
+			line-height: 1.15;
+		}
+
+		input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+		select,
+		textarea {
+			-webkit-appearance: none;
+			background-color: $white;
+			border: rc(1) solid $border-color;
+			border-radius: $border-radius;
+			color: lighten($body, 20%);
+			font-size: 85%;
+			line-height: 1.15;
+			outline: none;
+			padding: rc(8) rc(5);
+			transition: $ease;
+
+			&:hover,
+			&:focus {
+				color: $body;
+			}
+		}
+
+		input {
+
+			&[type="checkbox"],
+			&[type="radio"] {
+				font-size: 100%;
+			}
+		}
+
+		select {
+			background-image: linear-gradient(45deg, transparent 50%, rgb(100, 100, 100) 50%), linear-gradient(135deg, rgb(100, 100, 100) 50%, transparent 50%);
+			background-position: calc(100% - 16px) calc(1em - 0.1px), calc(100% - 11px) calc(1em - 0.1px), calc(100% - 2.5em) 0.5em;
+			background-size: rc(5) rc(5), rc(5) rc(5), rc(1) 1.5em;
+			background-repeat: no-repeat;
+		}
+
+		button,
+		input[type="button"],
+		input[type="submit"] {
+			-webkit-appearance: none;
+
+			@include btn;
+		}
+	}
+}
+
+/**
+* #.# Ninja Forms 3.0+
+*/
+.nf-form-cont {
+
+	.nf-form-fields-required {
+		font-size: 80%;
+		font-style: italic;
+		margin: 0 0 rc(10) 0;
+		opacity: 0.5;
+
+		span {
+			color: inherit;
+		}
+	}
+
+	.ninja-forms-req-symbol {
+		color: inherit;
+	}
+
+	.nf-field-container {
+		margin: rc(10) 0;
+
+		&.label-above {
+
+			.nf-field-label {
+				margin: 0 0 rc(5);
+			}
+		}
+
+		&.label-left {
+
+			.list-radio-wrap,
+			.list-checkbox-wrap {
+
+				.nf-field-label {
+					margin-top: rc(10);
+				}
+			}
+		}
+
+		&.submit-container {
+			margin-top: rc(15);
+		}
+	}
+
+	.list-radio-wrap .nf-field-element,
+	.list-checkbox-wrap .nf-field-element {
+
+		li {
+			margin: rc(5) 0 !important;
+			padding-left: rc(20) !important;
+			position: relative;
+
+			input {
+
+				@include align-vertical;
+				left: 0;
+			}
+		}
+	}
+
+	input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+	select,
+	textarea {
+		display: block;
+	}
+
+	.nf-error {
+
+		input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+		select,
+		textarea {
+			background-color: rgba($error, 0.1);
+			border-color: $error;
+			color: $error;
+		}
+
+		.nf-error-msg {
+			font-size: 65%;
+			text-transform: uppercase;
+		}
+	}
+
+	.nf-error-field-errors {
+
+		@include message-error;
+	}
+}
+
+/**
+* #.# Ninja Forms Calendar
+*/
+
+.pika-lendar {
+
+	table {
+
+		thead {
+
+			tr {
+
+				th {
+					background-color: transparent;
+
+					abbr {
+						border: none;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		tbody {
+
+			tr {
+
+				td {
+
+					&.is-today {
+						color: rgb(50, 50, 50);
+
+						button {
+							color: inherit;
+
+							&:hover {
+								color: $white;
+							}
+						}
+					}
+
+					button {
+						border-radius: 0;
+
+						&:hover {
+							background-color: rgb(125, 125, 125);
+							border-radius: 0;
+						}
+					}
+
+
+				}
+			}
+		}
+	}
+}

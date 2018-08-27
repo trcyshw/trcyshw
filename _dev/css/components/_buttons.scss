@@ -1,0 +1,119 @@
+/**
+* #.# Button Mixins
+*/
+.btn {
+	background-color: $body;
+	border: none;
+	border-radius: $button-radius;
+	box-shadow: none;
+	color: $white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $font-button;
+	font-size: 90%;
+	font-weight: $fw-button;
+	line-height: 1;
+	margin: 0;
+	padding: 0.75em 1.5em;
+	text-decoration: none;
+	text-transform: $font-button-transform;
+	transition: $ease;
+
+	&:hover,
+	&:focus {
+		background-color: darken($body, 10);
+		border: none;
+		box-shadow: none;
+		color: $white;
+	}
+}
+
+@mixin btn {
+
+	@extend .btn;
+}
+
+@mixin btn-brand1 {
+
+	@extend .btn;
+	background-color: $brand1;
+
+	&:hover,
+	&:focus {
+		background-color: darken($brand1, 10);
+	}
+}
+
+@mixin btn-brand2 {
+
+	@extend .btn;
+	background-color: $brand2;
+
+	&:hover,
+	&:focus {
+		background-color: darken($brand2, 10);
+	}
+}
+
+@mixin btn-brand3 {
+
+	@extend .btn;
+	background-color: $brand3;
+
+	&:hover,
+	&:focus {
+		background-color: darken($brand3, 10);
+	}
+}
+
+@mixin btn-hover {
+	background-color: darken($body, 10);
+}
+
+@mixin btn-brand1-hover {
+	background-color: darken($brand1, 10);
+}
+
+@mixin btn-brand2-hover {
+	background-color: darken($brand2, 10);
+}
+
+@mixin btn-brand3-hover {
+	background-color: darken($brand3, 10);
+}
+
+@mixin btn-fullwidth { /*To be used in conjunction with other button styles*/
+	width: 100%;
+}
+
+@mixin btn-small {
+	font-size: rc(12);
+	text-transform: uppercase;
+}
+
+/**
+* #.# Button Variations
+*/
+.btn-brand1 {
+
+	@include btn-brand1;
+}
+
+.btn-brand2 {
+
+	@include btn-brand2;
+}
+
+.btn-brand3 {
+
+	@include btn-brand3;
+}
+
+.btn-small {
+
+	@include btn-small;
+}
+
+br + .btn {
+	margin-top: rc(10);
+}
