@@ -14,7 +14,7 @@ $twitter   = get_option( 'options_social_twitter' );
 if ( $email || $facebook . $github . $instagram . $linkedin . $twitter ) {
 	echo '<ul class="site-contact">';
 	if ( $email ) {
-		echo '<li><a href="mailto:' . esc_url( $email ) . '?subject=via%20trcyshw.com"><i class="fal fa-envelope"></i></a></li>';
+		echo '<li><a href="mailto:' . sanitize_email( $email ) . '?subject=via%20trcyshw.com"><i class="fal fa-envelope"></i></a></li>'; // phpcs:ignore
 	}
 	if ( $facebook ) {
 		echo '<li><a href="' . esc_url( $facebook ) . '" target="_blank" rel="nofollow"><i class="fab fa-facebook-square"></i></a></li>';
