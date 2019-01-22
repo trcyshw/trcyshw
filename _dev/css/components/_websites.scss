@@ -36,6 +36,35 @@
 			padding: 0;
 			position: relative;
 
+			&:first-of-type {
+
+				&:before {
+
+					@include align-center;
+					background-color: rgba($white, 0.5);
+					border-radius: 50%;
+					content: "";
+					height: rc(30);
+					pointer-events: none;
+					width: rc(30);
+					z-index: 1;
+				}
+
+				&:after {
+
+					@include align-center;
+					animation: pulse 1s ease-out infinite;
+					background-color: rgba($white, 0.5);
+					border-radius: 50%;
+					content: "";
+					height: rc(50);
+					margin: rc(-25) 0 0 rc(-25);
+					pointer-events: none;
+					width: rc(50);
+					z-index: 0;
+				}
+			}
+
 			@media only screen and (max-width: 530px) {
 				width: 50%;
 
@@ -260,5 +289,22 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes pulse {
+
+	0% {
+		opacity: 0;
+		transform: scale(0.1, 0.1);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1.1, 1.1);
 	}
 }
