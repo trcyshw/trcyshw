@@ -61,6 +61,15 @@
 		color: $white;
 		padding: 3em 5%;
 	}
+
+	&__contact {
+		margin: 2em 0 0;
+		text-align: center;
+
+		a {
+			margin: 0.5em;
+		}
+	}
 }
 
 .content__404 {
