@@ -43,7 +43,7 @@ $content    = get_extended( apply_filters( 'the_content', get_post_field( 'post_
 			if ( $email || $linkedin ) {
 				echo '<div class="content__profile__contact">';
 				if ( $email ) {
-					echo '<a href="mailto:' . sanitize_email( $email ) . '?subject=via%20trcyshw.com"class="btn btn-brand2">Email Me</a>';
+					echo '<a href="mailto:' . sanitize_email( $email ) . '?subject=via%20trcyshw.com"class="btn btn-brand2">Email Me</a>'; // phpcs:ignore
 				}
 				if ( $linkedin ) {
 					echo '<a href="' . esc_url( $linkedin ) . '" target="_blank" rel="nofollow"class="btn btn-brand2">Find me on LinkedIn</a>';
