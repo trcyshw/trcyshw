@@ -1,6 +1,6 @@
 <?php
 /**
- * Homepage template
+ * Homepage template.
  *
  * @package WordPress
  */
@@ -38,15 +38,19 @@ $content    = get_extended( apply_filters( 'the_content', get_post_field( 'post_
 			} else {
 				the_content();
 			}
+			$cv       = wp_get_attachment_url( 207 );
 			$email    = get_option( 'options_social_email' );
 			$linkedin = get_option( 'options_social_linkedin' );
 			if ( $email || $linkedin ) {
 				echo '<div class="content__profile__contact">';
 				if ( $email ) {
-					echo '<a href="mailto:' . sanitize_email( $email ) . '?subject=via%20trcyshw.com"class="btn btn-brand2">Email Me</a>'; // phpcs:ignore
+					echo '<a href="mailto:' . sanitize_email( $email ) . '?subject=via%20trcyshw.com" class="btn btn-brand2">Email Me</a>'; // phpcs:ignore
 				}
 				if ( $linkedin ) {
-					echo '<a href="' . esc_url( $linkedin ) . '" target="_blank" rel="nofollow"class="btn btn-brand2">Find me on LinkedIn</a>';
+					echo '<a href="' . esc_url( $linkedin ) . '" target="_blank" rel="nofollow" class="btn btn-brand2">Find me on LinkedIn</a>';
+				}
+				if ( $cv ) {
+					echo '<a href="' . esc_url( $cv ) . '" target="_blank" rel="nofollow" class="btn btn-brand2">View my CV</a>';
 				}
 				echo '</div>';
 			}
