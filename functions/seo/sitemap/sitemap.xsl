@@ -13,36 +13,50 @@
 						font-size: 13px;
 					}
 
-					#content {
+					.sitemap {
 						margin: 0 auto;
 						padding: 20px 0;
 						width: 1000px;
 					}
 
-					table {
+					.sitemap h1 {
+						text-align: center;
+					}
+
+					.sitemap table {
 						border-collapse: collapse;
 						margin: 40px auto;
 						width: 100%;
 					}
 
-					table tr th,
-					table tr td {
+					.sitemap table tr th,
+					.sitemap table tr td {
 						font-size: 11px;
 						padding: 8px;
 						text-align: left;
 					}
 
-					table tr:nth-child(even) td {
-						background-color: #efefef;
+					.sitemap table tr:nth-child(even) td {
+						background-color: rgb(245, 245, 245);
 					}
 
-					table tr th:last-of-type,
-					table tr td:last-of-type {
+					.sitemap table tr th:last-of-type,
+					.sitemap table tr td:last-of-type {
 						text-align: right;
 					}
 
-					table tr td a {
-						color: #000;
+					.sitemap table tr td a {
+						color: rgb(0, 0, 0);
+					}
+
+					.sitemap .sitemap__footer {
+						color: rgb(128, 128, 128);
+						font-size: 11px;
+						text-align: center;
+					}
+
+					.sitemap__footer a {
+						color: rgb(128, 128, 128);
 					}
 				</style>
 			</head>
@@ -52,10 +66,10 @@
 		</html>
 	</xsl:template>
 	<xsl:template match="sitemap:urlset">
-		<div id="content">
+		<div class="sitemap">
 			<h1>XML Sitemap</h1>
 			<table>
-				<tr style="border-bottom: 1px #000 solid;">
+				<tr style="border-bottom:1px rgb(0, 0, 0) solid;">
 					<th>URL</th>
 					<th>Last modified (GMT)</th>
 				</tr>
@@ -80,10 +94,10 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="sitemap:sitemapindex">
-		<div id="content">
+		<div class="sitemap">
 			<h1>XML Sitemap Index</h1>
 			<table>
-				<tr style="border-bottom: 1px #000 solid;">
+				<tr style="border-bottom:1px rgb(0, 0, 0) solid;">
 					<th>URL of sub-sitemap</th>
 					<th>Last modified (GMT)</th>
 				</tr>

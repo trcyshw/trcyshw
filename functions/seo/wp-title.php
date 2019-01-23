@@ -1,6 +1,7 @@
 <?php
 /**
- * GOOP's SEO stuff all lives here.
+ * SEO stuff all lives here.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -8,9 +9,9 @@
 /**
  * Function to replace the wp_title.
  *
- * @param [type] $page_slug [description].
+ * @param [type] $page_slug Description still to come..
  */
-function get_id_by_slug( $page_slug ) {
+function ts_get_id_by_slug( $page_slug ) {
 	$page = get_page_by_path( $page_slug );
 	if ( $page ) {
 		return $page->ID;
@@ -18,11 +19,10 @@ function get_id_by_slug( $page_slug ) {
 		return null;
 	}
 }
-
 /**
  * Function to replace the wp_title.
  */
-function post_title() {
+function ts_replace_wp_title() {
 	// Leave the auto-generated date archive out of this.
 	if ( is_date() ) {
 		$term = get_queried_object();
@@ -33,15 +33,15 @@ function post_title() {
 	}
 	if ( is_archive() || is_category() || is_tax() ) {
 		$metadata_title = get_term_meta( $term, '_metadata_title', true );
-		$title = get_the_archive_title();
+		$title          = get_the_archive_title();
 	} else {
 		if ( is_home() ) {
-			$blog = get_option( 'page_for_posts' );
+			$blog           = get_option( 'page_for_posts' );
 			$metadata_title = get_post_meta( $blog, '_metadata_title', true );
-			$title = get_post_meta( $blog, '_metadata_title', true );
+			$title          = get_the_title( $blog );
 		} else {
 			$metadata_title = get_post_meta( get_the_ID(), '_metadata_title', true );
-			$title = get_the_title();
+			$title          = get_the_title();
 		}
 	}
 	// Exclude 404 and search results.
@@ -72,4 +72,4 @@ function post_title() {
 		}
 	}
 }
-add_filter( 'wp_title', 'post_title' );
+add_filter( 'wp_title', 'ts_replace_wp_title' );

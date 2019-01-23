@@ -1,6 +1,7 @@
 <?php
 /**
  * All the stuff to go into wp_head.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -8,18 +9,18 @@
 if ( is_archive() || is_tax() ) {
 	// Leave the auto-generated date archive out of this.
 	if ( is_date() ) {
-		$term = get_queried_object();
+		$the_term = get_queried_object();
 	} else {
 		if ( ! is_date() && is_archive() || is_category() || is_tax() ) {
-			$term = get_queried_object()->term_id;
+			$the_term = get_queried_object()->term_id;
 		}
 	}
-	$metadata_advanced    = get_term_meta( $term, '_metadata_advanced' );
-	$metadata_description = get_term_meta( $term, '_metadata_description', true );
-	$metadata_follow      = get_term_meta( $term, '_metadata_follow', true );
-	$metadata_index       = get_term_meta( $term, '_metadata_index', true );
-	$metadata_keywords    = get_term_meta( $term, '_metadata_keywords', true );
-	$metadata_sitemap     = get_term_meta( $term, '_metadata_sitemap', true );
+	$metadata_advanced    = get_term_meta( $the_term, '_metadata_advanced' );
+	$metadata_description = get_term_meta( $the_term, '_metadata_description', true );
+	$metadata_follow      = get_term_meta( $the_term, '_metadata_follow', true );
+	$metadata_index       = get_term_meta( $the_term, '_metadata_index', true );
+	$metadata_keywords    = get_term_meta( $the_term, '_metadata_keywords', true );
+	$metadata_sitemap     = get_term_meta( $the_term, '_metadata_sitemap', true );
 } else {
 	$metadata_advanced    = get_post_meta( get_the_ID(), '_metadata_advanced', true );
 	$metadata_description = get_post_meta( get_the_ID(), '_metadata_description', true );
@@ -63,7 +64,7 @@ if ( ! empty( array_filter( $robots ) ) ) {
 	echo '<meta name="robots" content="' . esc_html( $robots_array ) . '" />' . "\n";
 }
 // Leave the auto-generated date archive out of this.
-if ( ! is_date() ) {
+if ( ! is_date() && ! is_404() && ! is_search() ) {
 	// Display meta description.
 	if ( $metadata_description ) {
 		if ( ! is_archive() ) {
@@ -71,7 +72,8 @@ if ( ! is_date() ) {
 		}
 		echo '<meta name="description" content="' . esc_html( $metadata_description ) . '" />' . "\n";
 	} else {
-		echo '<meta name="description" content="' . esc_html( get_the_excerpt() ) . '" />' . "\n";
+		global $post;
+		echo '<meta name="description" content="' . esc_html( apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $post->ID ) ) ) . '" />' . "\n";
 	}
 	// Display meta keywords.
 	if ( $metadata_keywords ) {
