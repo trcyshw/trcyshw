@@ -36,7 +36,7 @@
 			padding: 0;
 			position: relative;
 
-			&:first-of-type {
+			&:first-of-type .website__image {
 
 				&:before {
 
@@ -145,6 +145,7 @@
 				cursor: pointer;
 				overflow: hidden;
 				padding: 0;
+				position: relative;
 
 				span {
 
@@ -273,6 +274,14 @@
 			}
 
 			&.is-expanded {
+
+				.website__image {
+
+					&:before,
+					&:after {
+						display: none;
+					}
+				}
 
 				.website__image {
 
