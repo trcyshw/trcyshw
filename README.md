@@ -5,8 +5,8 @@
 > Note that these instructions assume that you have your preferred local WordPress environment set up already. This theme is set up for **gulp**.
 
 - Use `cd your/themes/folder/path` in the terminal to navigate to your themes folder.
-- Run `git clone https://github.com/goopdigital/goop-theme.git` to clone this repository to your themes folder within the site you're building.
-- `mv goop-theme newname` to rename the folder to the Client Name.
+- Clone this repository to your themes folder within the site you're building.
+- Run `mv oldname newname` to rename the folder to the Client Name.
 - `cd` into your renamed theme folder.
 - Run `npm install` inside your theme directory.
 - Amend `gulpfile.js` with the Client URL for browser-sync.
