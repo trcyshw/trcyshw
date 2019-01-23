@@ -1,6 +1,7 @@
 <?php
 /**
  * A file for REST API things.
+ * Work in progress.
  *
  * @package WordPress.
  */
@@ -20,7 +21,7 @@ add_action( 'rest_api_init', 'create_api_posts_meta_field' );
 /**
  * Function to get the post meta.
  *
- * @param string $object desc.
+ * @param string $object Description still to come.
  */
 function get_post_meta_for_api( $object ) {
 	// Get the id of the post object array.

@@ -1,6 +1,7 @@
 <?php
 /**
  * Custom settings for Advanced Custom Fields.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -41,7 +42,7 @@ add_action( 'acf/init', 'ts_setup_acf' );
 /**
  * Show ACF in admin menu for admins.
  *
- * @param [type] $show [desc].
+ * @param [type] $show Description still to come.
  */
 function ts_show_acf_for_admin( $show ) {
 	return current_user_can( 'update_core' );
@@ -51,7 +52,7 @@ add_filter( 'acf/settings/show_admin', 'ts_show_acf_for_admin' );
 /**
  * Save ACF fields to json files with custom path.
  *
- * @param [type] $path [desc].
+ * @param [type] $path Description still to come.
  */
 function ts_acf_json_save_point( $path ) {
 	$path = get_template_directory() . '/assets/json/acf';
@@ -62,7 +63,7 @@ add_filter( 'acf/settings/save_json', 'ts_acf_json_save_point' );
 /**
  * Load ACF fields json files from custom path.
  *
- * @param [type] $paths [desc].
+ * @param [type] $paths Description still to come.
  */
 function ts_acf_json_load_point( $paths ) {
 	// remove original path (optional).

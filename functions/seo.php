@@ -1,6 +1,7 @@
 <?php
 /**
  * Load all SEO-related functions and scripts.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -22,7 +23,7 @@ add_action( 'wp_head', 'ts_seo_into_wp_head', 1 );
 /**
  * Bring in our styles and jQuery on the pages where we need them.
  *
- * @param [type] $hook [description].
+ * @param [type] $hook Description still to come.
  */
 function ts_seo_scripts_and_styles( $hook ) {
 	wp_enqueue_style( 'admin-css', get_template_directory_uri() . '/functions/assets/css/admin.css' );

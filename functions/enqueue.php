@@ -1,6 +1,7 @@
 <?php
 /**
  * Enqueue scripts and styles.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -8,7 +9,7 @@
 /**
  * Enqueue frontend scripts.
  */
-function enqueue_ts_frontend_scripts() {
+function ts_enqueue_frontend_scripts() {
 	// jQuery.
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, null, true );
@@ -26,8 +27,8 @@ function enqueue_ts_frontend_scripts() {
 /**
  * Hook into the 'wp_enqueue_scripts' action.
  */
-add_action( 'wp_enqueue_scripts', 'enqueue_ts_frontend_scripts' );
-add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
+add_action( 'wp_enqueue_scripts', 'ts_enqueue_frontend_scripts' );
+add_filter( 'script_loader_tag', 'ts_add_defer_attribute', 10, 2 );
 
 /**
  * Filter the HTML script tag of `font-awesome` script to add `defer` attribute.
@@ -37,7 +38,7 @@ add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
  *
  * @return Filtered HTML script tag.
  */
-function add_defer_attribute( $tag, $handle ) {
+function ts_add_defer_attribute( $tag, $handle ) {
 	if ( 'font-awesome' === $handle ) {
 		$tag = str_replace( ' src', ' defer src', $tag );
 	}

@@ -1,6 +1,7 @@
 <?php
 /**
- * Functions for images, galleries and the Media Library
+ * Functions for images, galleries and the Media Library.
+ * Work in progress.
  *
  * @package WordPress
  */
@@ -58,7 +59,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 /**
  * Strip the gallery shortcode from the content.
  *
- * @param [type] $content [description].
+ * @param string $content Description still to come.
  */
 function strip_shortcode_gallery( $content ) {
 	preg_match_all( '/' . get_shortcode_regex() . '/s', $content, $matches, PREG_SET_ORDER );
@@ -78,7 +79,7 @@ function strip_shortcode_gallery( $content ) {
 /**
  * Attach a class to linked images' parent anchors.
  *
- * @param  [type] $content [description].
+ * @param string $content Description still to come.
  */
 function ts_linked_images_class( $content ) {
 	$classes = 'img';
@@ -104,8 +105,8 @@ add_action( 'after_setup_theme', 'default_attachment_display_settings' );
 /**
  * Get the caption of an image and display it in our lightbox.
  *
- * @param [type] $link [description].
- * @param [type] $id   [description].
+ * @param string $link Description still to come.
+ * @param int    $id   Description still to come.
  */
 function add_title_attachment_link( $link, $id = null ) {
 	$id         = intval( $id );
@@ -134,8 +135,8 @@ add_action( 'init', 'add_tags_for_attachments' );
 /**
  * Change upload directory for non-image files only.
  *
- * @param  [type] $file [description].
- * @return [type]       [description].
+ * @param  [type] $file Description still to come.
+ * @return [type]       Description still to come.
  */
 function file_pre_upload( $file ) {
 	add_filter( 'upload_dir', 'file_custom_upload_dir' );
@@ -144,8 +145,8 @@ function file_pre_upload( $file ) {
 /**
  * Change upload directory for non-image files only.
  *
- * @param  [type] $fileinfo [description].
- * @return [type]           [description].
+ * @param  [type] $fileinfo Description still to come.
+ * @return [type]           Description still to come.
  */
 function file_post_upload( $fileinfo ) {
 	remove_filter( 'upload_dir', 'file_custom_upload_dir' );
@@ -154,8 +155,8 @@ function file_post_upload( $fileinfo ) {
 /**
  * Change upload directory for non-image files only.
  *
- * @param  [type] $path [description].
- * @return [type]       [description].
+ * @param  [type] $path Description still to come.
+ * @return [type]       Description still to come.
  */
 function file_custom_upload_dir( $path ) {
 	$extension = substr( strrchr( $_POST['name'], '.' ), 1 );
@@ -176,9 +177,9 @@ add_filter( 'wp_handle_upload', 'file_post_upload' );
 /**
  * Make galleries link to Media File.
  *
- * @param  [type] $out   [description].
- * @param  [type] $pairs [description].
- * @param  [type] $atts  [description].
+ * @param  [type] $out   Description still to come.
+ * @param  [type] $pairs Description still to come.
+ * @param  [type] $atts  Description still to come.
  */
 function gallery_should_link_to_files( $out, $pairs, $atts ) {
 	$atts        = shortcode_atts( array(
@@ -194,7 +195,7 @@ add_filter( 'shortcode_atts_gallery', 'gallery_should_link_to_files', 10, 3 );
  * Description is optional, it is commented out by default.
  * Source: https://brutalbusiness.com/automatically-set-the-wordpress-image-title-alt-text-other-meta/
  *
- * @param [type] $post_id [desc].
+ * @param [type] $post_id Description still to come.
  */
 function set_image_meta_on_upload( $post_id ) {
 	// Check if uploaded file is an image, else do nothing.

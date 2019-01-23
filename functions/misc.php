@@ -67,7 +67,7 @@ add_filter( 'excerpt_more', 'ts_excerpt_readmore' );
 /**
  * Order CPTs by title in wp-admin.
  *
- * @param [type] $query [desc].
+ * @param [type] $query Description still to come.
  */
 function ts_cpt_admin_order( $query ) {
 	if ( $query->is_admin ) {
