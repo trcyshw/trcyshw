@@ -1,6 +1,6 @@
 // Core
-@import "functions";
-@import "normalise";
+@import "core/functions";
+@import "core/normalise";
 
 // Variables
 @import "variables/colors";
@@ -8,61 +8,19 @@
 @import "variables/other";
 
 // Core
-@import "mixins";
-@import "typography";
-
-// Navigation
-//@import "nav/main";
-//@import "nav/mobile";
+@import "core/mixins";
+@import "core/typography";
 
 // Components
-// @import "components/messages";
-// @import "components/address";
-// @import "components/banner";
 @import "components/buttons";
-// @import "components/forms";
-// @import "components/gallery";
 @import "components/header";
-// @import "components/iframes";
-// @import "components/images";
-// @import "components/lightbox";
 @import "components/links";
-// @import "components/pagination";
-// @import "components/search";
-// @import "components/sidebar";
-// @import "components/slider";
 @import "components/social";
-// @import "components/utilities";
 @import "components/websites";
 
-// Vendor-specific
-// @import "vendor/gravity-forms";
-// @import "vendor/slick-slider";
-
 // Pages
-// @import "pages/blog";
-// @import "pages/children";
-// @import "pages/front";
 @import "pages/page";
-// @import "pages/search-results";
-// @import "pages/styleguide";
 
 // Parts.
 @import "common";
-@import "grid";
-
-// Extras
-//@import "extras/modal";
-// Extras - as at 18/07/17 these have not been rewritten yet
-//@import "extras/accordions";
-//@import "extras/events";
-//@import "extras/carousel";
-//@import "extras/mailchimp";
-//@import "extras/reviews";
-//@import "extras/slider";
-//@import "extras/staff";
-//@import "extras/woocommerce";
-
-// Overrides
-// @import "overrides/ie";
-
+@import "core/grid";
