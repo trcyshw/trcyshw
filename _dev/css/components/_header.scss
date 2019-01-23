@@ -1,0 +1,187 @@
+/*==============================================================================
+	HEADER
+	shrinking headers can be styled at the end of this file
+==============================================================================*/
+.site-header {
+	background-color: rgba($white, 0);
+	border: solid transparent;
+	border-width: 0 0 rc(1);
+	margin: 0;
+	top: 0;
+	transition: $ease;
+	width: 100%;
+	z-index: 100;
+
+	.container {
+
+		@include row(space-between);
+		align-items: center;
+		max-width: none;
+		padding: rc(10);
+
+		.site-logo {
+
+			a {
+
+				@include row(flex-start);
+				align-items: center;
+				color: $brand1;
+				margin: 0 auto;
+				text-decoration: none;
+
+				@include md {
+					margin: 0;
+					max-width: 100%;
+				}
+
+				svg {
+					display: inline-block;
+					margin: 0 auto;
+					max-width: rc(50); // update this to suit client logo
+					width: 100%;
+
+					.error404 & {
+
+						g {
+
+							path,
+							rect {
+								stroke: $white !important;
+							}
+						}
+					}
+
+					@include md {
+						margin: 0;
+						max-width: rc(60);
+					}
+				}
+
+				span {
+					display: none;
+					font-size: 110%;
+					font-weight: $fw-normal;
+					opacity: 0;
+					padding: 0 0 0 0.5em;
+					transition: $ease;
+
+					@include sm {
+						display: inline-block;
+						font-size: 150%;
+					}
+				}
+			}
+		}
+
+		.nav--main {
+
+			.error404 & {
+				opacity: 0;
+				z-index: -1;
+			}
+
+			ul {
+
+				@include row(flex-end);
+				list-style: none;
+				margin: 0.5em 0 0;
+				padding: 0;
+
+				li {
+					margin: 0 0 0 1em;
+					padding: 0;
+
+					a {
+						color: $white;
+						text-decoration: none;
+						text-transform: lowercase;
+						transition: $ease;
+
+						&.current {
+							color: $brand2;
+						}
+
+						&:before {
+							content: "#";
+						}
+					}
+
+					&:hover {
+
+						a {
+							color: $brand2;
+						}
+					}
+				}
+			}
+		}
+
+		.site-contact {
+
+			@include row(flex-end);
+			align-items: center;
+			color: $white;
+			font-size: rc(22);
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin: 0 0 0 0.5em;
+
+				a {
+					color: inherit;
+					text-decoration: none;
+
+					svg {
+						font-size: inherit;
+
+						path {
+							transition: all $ease;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.fixed {
+		background-color: $white;
+		border-color: rgba($brand1, 0.1);
+
+		.container {
+
+			.site-logo a span {
+				opacity: 1;
+			}
+
+			.site-contact {
+				color: $brand1;
+			}
+
+			.nav--main {
+
+				ul {
+
+					li {
+
+						a {
+							color: $nav-l1;
+
+							&.current {
+								color: $brand2;
+							}
+						}
+
+						&:hover {
+
+							a {
+								color: $brand2;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
